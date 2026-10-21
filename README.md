@@ -109,6 +109,10 @@ npm run build:pages
 
 `pages-dist/` 包含用于静态托管的生产版 `index.html`、`404.html`、`.nojekyll` 和图标。页面内嵌全部代码和样式，兼容 GitHub Pages 的仓库子目录地址。发布时只上传此目录，不包含本地浏览器中的课程修改或上传资料。
 
-GitHub Pages 可使用专用 `gh-pages` 分支根目录作为来源。需要在仓库 Settings → Pages 中启用该来源，并确认账号和仓库允许使用 Pages。本项目的部署流程不会修改仓库可见性或开通付费服务。
+公开体验地址：https://letao513760695-rgb.github.io/fuyao-academy/
+
+当前 GitHub Pages 的发布来源为 **`main` 分支的 `/(root)`**，已完成首次发布。`main` 中保存可直接托管的网页成品，完整 React/TypeScript 开发源码保存在 **`prototype/fuyao-academy-v1`** 分支；`gh-pages` 保留了之前准备的发布文件，当前不作为发布来源。
+
+更新网站时，在开发分支执行 `npm run build:pages`，将 `pages-dist/` 的四个文件同步到 `main` 后正常提交推送，等待 GitHub 的 `pages build and deployment` 成功，并检查公开网址。不需要切换 Pages 设置；保留远程已有提交和其他文件，不使用强制推送。
 
 公共体验版的管理入口也公开，但所有人只修改自己浏览器中的演示数据，不影响其他访问者。
